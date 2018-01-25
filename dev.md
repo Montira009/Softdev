@@ -32,32 +32,33 @@
 ---------------------------------------------------------------------------------------------------------
 
 New Commands
-File Undo
+# File Undo
 	$ git checkout test.txt
-??? undo ???? ?????????????? ??? add ?????? > ?????????? untrack
+# การ undo ไฟล์ โดยที่ไฟล์นั้น ได้ add ไปแล้ว > จะได้สถานะ untrack
 	$ git reset HEAD test.txt
-???????????? Commit
+# การยกเลิกการ Commit
 	$ git reset --soft "HEAD^"  
-???????????????
+# การดูรายละเอียด
 	$ git log --oneline
-Delete file, After committed
+# Delete file, After committed
 	$ git rm test.txt
-Recovery
+# Recovery
 	$ git reset HEAD test.txt
 	$ git checkout test.txt
-Hide your Update
+# Hide your Update
 	$ git add file
 	$ git stash    
 	$ git pull 
 	$ git stash pop  #recovery data 
 	$ git add > commit > push
-Branch
+# Branch
 	$ git branch yourbranch 		// Create Branch
 	$ git checkour yourbranch		//Move to branch yourbranch
 	$ git checkout -b yourbranch 		//Create branch and move to new branch
-$ git branch -a 			// Status branch
-$ git branch -d yourbranch 		//Delete branch | Move to master first.
-$ git push -u origin yourbranch	
--- Upload branch to master -- 
-$ git checkout master
-$ git merge --no-ff dev 		// merge dev to master | --no-ff 
+	$ git branch -a 			// Status branch
+	$ git branch -d yourbranch 		//Delete branch | Move to master first.
+	$ git push -u origin yourbranch	
+
+# -- Upload branch to master -- 
+	$ git checkout master
+	$ git merge --no-ff dev 		// merge dev to master | --no-ff 
